@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    // google.load("feeds", "1");
+
+    // function initialize() {
+    //   var feed = new google.feeds.Feed("http://fastpshb.appspot.com/feed/1/fastpshb");
+    //   feed.load(function(result) {
+    //     if (!result.error) {
+    //       var container = document.getElementById("feed");
+    //       for (var i = 0; i < result.feed.entries.length; i++) {
+    //         var entry = result.feed.entries[i];
+    //         var div = document.createElement("div");
+    //         div.appendChild(document.createTextNode(entry.title));
+    //         container.appendChild(div);
+    //       }
+    //     }
+    //   });
+    // }
+    // google.setOnLoadCallback(initialize);
+    </script>
+
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <p>Welcome to {{ title }}</p>
+
+  </head>
+  <body>
+    <form id="search-form" action="" method="">
+<!--       <input type="checkbox" name="site" value="foxnews.com">foxnews.com<br>
+      <input type="checkbox" name="site" value="cnn.com">CNN<br>
+      <input type="checkbox" name="site" value="infowars.com">InfoWars<br> -->
+      <input type="text" id="news-site">
+      <input type="text" placeholder="Search for news" id="search-value" name="query">
+      <input type="submit" value="Search">
+    </form>
+    <div id="feed"></div>
+    <div id="content"></div>
+    <ul id="results"></ul>
+    <script src="javascripts/jquery.js"></script>
+    <script type="text/javascript" src="javascripts/newsfeed.js"></script>
+  </body>
+</html>
