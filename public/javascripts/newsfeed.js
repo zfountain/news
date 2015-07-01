@@ -12,7 +12,7 @@ $("#search-form").submit(function(event) {
   var site = "site:" + $("#news-site").val();
   var searchTerm = $("#search-value").val();
   var query = site + ' ' + searchTerm;
-  
+
 // TODO: Checkbox functionality for searching multiple sites
 /*
   var sites = [];
@@ -36,7 +36,7 @@ function findDone(result) {
     // the url.
     for (var i = 0; i < result.entries.length; i++) {
       var entry = result.entries[i];
-      html += '<p><a href="' + entry.link + '">' + entry.title + '</a></p>';
+      html += '<li><a href="' + entry.link + '">' + entry.title + '</a></li>';
     }
     content.innerHTML = html;
   }

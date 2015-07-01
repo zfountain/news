@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/reset.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -27,21 +28,18 @@
   </head>
   <body>
     <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
-
-  </head>
-  <body>
     <form id="search-form" action="" method="">
-<!--       <input type="checkbox" name="site" value="foxnews.com">foxnews.com<br>
-      <input type="checkbox" name="site" value="cnn.com">CNN<br>
-      <input type="checkbox" name="site" value="infowars.com">InfoWars<br> -->
-      <input type="text" id="news-site">
-      <input type="text" placeholder="Search for news" id="search-value" name="query">
+      <select name="news-site" id="news-site">
+        <option value="cnn.com">cnn.com</option>
+        <option value="foxnews.com">foxnews.com</option>
+        <option value="infowars.com">infowars.com</option>
+      </select>
+      <input type="search" placeholder="Search for news" id="search-value" name="query">
       <input type="submit" value="Search">
     </form>
-    <div id="feed"></div>
-    <div id="content"></div>
-    <ul id="results"></ul>
+    <div id="content">
+      <ul id="feed"></ul>
+    </div>
     <script src="javascripts/jquery.js"></script>
     <script type="text/javascript" src="javascripts/newsfeed.js"></script>
   </body>
