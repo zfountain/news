@@ -1,19 +1,18 @@
-/*
-*  How to find a feed based on a query.
-*/
+$( document ).ready(function() {
 
-// Get the value from the search field
+});
 google.load("feeds", "1");
-
 $("#search-form").submit(function(event) {
     // Prevent from from reloading the page
     event.preventDefault();
-  // Query for president feeds on cnn.com
+  // Get name from site dropdown menu
   var site = "site:" + $("#news-site").val();
+  // Get search term(s)
   var searchTerm = $("#search-value").val();
+  // Create query
   var query = site + ' ' + searchTerm;
 
-// TODO: Checkbox functionality for searching multiple sites
+// TODO: Functionality for searching multiple sites
 /*
   var sites = [];
   $.each($("input[name='site']:checked"), function() {
@@ -26,17 +25,16 @@ $("#search-form").submit(function(event) {
 });
 
 function findDone(result) {
-  // Make sure we didn't get an error.
+  // Check for errors
   if (!result.error) {
-    // Get content div
+    // Assign variables for "content" ul
     var content = document.getElementById('content');
     var html = '';
-
-    // Loop through the results and print out the title of the feed and link to
-    // the url.
+    console.log(result.entries);
+    // Loop through the results and print out the title and link "Read more" to the url.
     for (var i = 0; i < result.entries.length; i++) {
       var entry = result.entries[i];
-      html += '<li><a href="' + entry.link + '">' + entry.title + '</a></li>';
+      html += '<li>' + '<span class="title">' + entry.title + '</span>' + '<br>' + entry.contentSnippet + ' <a target="_blank" href="' + entry.link + '">' + "Read more" + '</a></li>';
     }
     content.innerHTML = html;
   }
