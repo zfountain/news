@@ -27,19 +27,29 @@
 
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    <form id="search-form" action="" method="">
-      <select name="news-site" id="news-site">
-        <option value="cnn.com">cnn.com</option>
-        <option value="foxnews.com">foxnews.com</option>
-        <option value="infowars.com">infowars.com</option>
-      </select>
-      <input type="search" placeholder="Search for news" id="search-value" name="query">
-      <input type="submit" value="Search">
-    </form>
-    <div id="content">
-      <ul id="feed"></ul>
-    </div>
+    <header>
+      <h1>{{ title }}</h1>
+    </header>
+    <div id="main">
+      <div id="form">
+        <form id="search-form" action="" method="">
+          <select name="news-site" id="news-site">
+            <option selected disabled>Select a site</option>
+            <option value="abcnews.com">ABC</option>       
+            <option value="cnn.com">CNN</option>
+            <option value="foxnews.com">FOX</option>
+            <option value="infowars.com">Infowars</option>
+            <option value="reddit.com">reddit.com</option>
+          </select>
+          <input type="search" placeholder="Search for news" id="search-value" name="query">
+          <input type="submit" value="Search" id="search-btn">
+        </form>
+      </div>
+      <ul id="content">
+      </ul>
+  </div>
+    <footer>&nbsp;
+    </footer>
     <script src="javascripts/jquery.js"></script>
     <script type="text/javascript" src="javascripts/newsfeed.js"></script>
   </body>

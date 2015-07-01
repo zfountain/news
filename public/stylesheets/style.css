@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -7,12 +6,50 @@ a {
   color: #00B7FF;
   text-decoration: none;
 }
+footer {
+  font-size: 3em;
+}
+header, footer {
+  background-color: #BEE2E7;
+}
 h1 {
   font-size: 3em;
 }
-input {
+li {
+  background-color: #FFF;
+  margin: 1%;
+  padding: 1%;
+}
+#content {
+  background-color: #454857;
+  padding: 1%;
+}
+#form {
+  background-color: #E58824;
+  padding: 1%;
+}
+#main {
+  margin: 0 auto;
+  width: 80%;
+}
+#news-site {
+  background: #FFF;
+  width: 25%;
+  padding: 1%;
   font-size: 2em;
 }
-li {
-  margin: 1%;
+#search-value {
+  background: #FFF;
+  border-radius: 5px;
+  font-size: 2em;
+  padding: 0.5%;
+  width: 60%;
+}
+#search-btn {
+  width: 15%;
+  display: none;
+}
+.title {
+  font-size: 1.25em;
+  font-weight: bold;
 }
