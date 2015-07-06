@@ -2,6 +2,8 @@
 
 ## Express.js search app
 
-[ERDs](https://docs.google.com/document/d/1NTYc941ViUl0IDcyUcdsCoULZq46KKZ-kNv4n4N9qLE/edit?usp=sharing)
+[Deployed app](https://honest-lumberjack-7497.herokuapp.com/)
+
+[ERDs](https://goo.gl/photos/qHUb16KooGJrWMax6)
 
 [Trello Board](https://trello.com/b/XOfzgrxC/news-aggregator)
